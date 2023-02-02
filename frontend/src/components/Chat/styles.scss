@@ -1,0 +1,126 @@
+.chat-container {
+  .chat-content {
+    max-width: 768px;
+    margin: 2rem auto;
+
+    @media (max-width: 767px) {
+      margin: 2rem 1rem;
+    } 
+
+    .chat-header {
+      .chat-header-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+          width: 48px;
+          height: 48px;
+          border-radius: 50px;
+        }
+
+        .user-data {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
+
+          .user-text-data {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+
+            span {
+              font-weight: 600;
+            }
+
+            .user-status {
+              color: var(--green);
+              font-weight: normal;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .close {
+          border: none;
+          background: transparent;
+        }
+      }
+    }
+
+    .messages {
+      margin: 3rem 0;
+      display: grid;
+      gap: 3rem;
+      font-size: 12px;
+      line-height: 14px;
+
+      .message {
+        margin-right: auto;
+
+        img {
+          width: 38px;
+        }
+
+        .top {
+        }
+
+        .body {
+          margin-top: 1rem;
+          background: var(--secondary);
+          padding: 1.4rem;
+          border-radius: 0 0.8rem 0.8rem 0.8rem;
+        }
+      }
+
+      .message-you {
+        margin-left: auto;
+        width: auto;
+        
+        .top {
+          text-align: right;
+        }
+        
+        .body {
+          background: var(--primary);
+          padding: 1.4rem;
+          margin-top: 1rem;
+          border-radius: 0.8rem 0.8rem 0 0.8rem;
+        }
+      }
+    }
+
+    .chat-bottom{
+      .input-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--dark-secondary);
+        height: 56px;
+        padding: 0 1.5rem;
+        border-radius: 99999px;
+
+        input {
+          width: 100%;
+          outline: 0;
+          background: transparent;
+          border: none;
+          color: var(--white);
+        }
+
+        .send {
+          background: transparent;
+          border: none;
+          color: var(--white);
+        }
+
+        &:focus-within {
+          outline: 1px solid var(--white);
+        }
+      }
+    }
+  }
+}
